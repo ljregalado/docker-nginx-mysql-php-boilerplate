@@ -2,26 +2,32 @@
 
 ## How to use
 
-1. Build the image
+1. Copy and customize the configuration options
+
+```
+cp .env.example .env
+```
+
+2. Build the image
 
 ```
 docker-compose build;
 ```
 
-2. Run the image
+3. Run the image
 
 ```
 docker-compose up -d;
 ```
 
-3. Create your php file
+4. Create your php file
 
 ```
 mkdir -p app/public
 echo "<?='Hello'?>" > app/public/index.php
 ```
 
-4. Or, create your laravel app
+5. Or, create your laravel app
 
 ```
 docker-compose exec app composer create-project laravel/laravel --prefer-dist app
